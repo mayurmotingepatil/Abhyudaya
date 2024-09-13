@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditUserInfoActivity"
+    android:orientation="vertical"
+    android:paddingTop="20dp">
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:inputType="text"
+        android:textColorHint="@color/transp_white"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/cream"
+        android:textSize="20sp"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="8dp"/>
+
+    <EditText
+        android:id="@+id/etMobNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mobile No."
+        android:inputType="phone"
+        android:textColorHint="@color/transp_white"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/cream"
+        android:textSize="20sp"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="8dp"/>
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textColorHint="@color/transp_white"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/cream"
+        android:textSize="20sp"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="8dp"/>
+
+    <EditText
+        android:id="@+id/etAadhar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Aadhar No."
+        android:inputType="text"
+        android:textColorHint="@color/transp_white"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/cream"
+        android:textSize="20sp"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="8dp"/>
+
+    <EditText
+        android:id="@+id/etPrevAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Previous Address"
+        android:inputType="text"
+        android:textColorHint="@color/transp_white"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/cream"
+        android:textSize="20sp"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="8dp"/>
+
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Name"
+        android:inputType="text"
+        android:textColorHint="@color/transp_white"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/cream"
+        android:textSize="20sp"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="8dp"/>
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColorHint="@color/transp_white"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/cream"
+        android:textSize="20sp"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="8dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAddPerson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_shape_cream"
+        android:textColor="@color/black"
+        android:text="Prossed"
+        android:textSize="20sp"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="30dp"
+        android:paddingHorizontal="20dp"/>
+
+
+</LinearLayout>

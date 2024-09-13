@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream">
+
+    <LinearLayout
+        android:id="@+id/noInternetIcons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/noInternetCellIcon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/icon_no_internet_cell"
+            app:tint="@color/black_cream"
+            android:layout_margin="20dp"/>
+
+        <ImageView
+            android:id="@+id/noInternetWifiIcon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/icon_no_internet_wifi"
+            app:tint="@color/black_cream"
+            android:layout_margin="20dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/titleNoInternet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/noInternetIcons"
+        android:layout_centerHorizontal="true"
+        android:text="No Internet Connection"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:fontFamily="@font/roboto_regular"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/messageNoInternet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleNoInternet"
+        android:layout_centerHorizontal="true"
+        android:text="Please check yoour internet connection and Try again."
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:fontFamily="@font/roboto_regular"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:layout_margin="15dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnNoInternet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/messageNoInternet"
+        android:background="@drawable/btn_shape"
+        android:text="Try Again"
+        android:textColor="@color/white"
+        android:layout_marginBottom="20dp"
+        android:paddingHorizontal="15dp"/>
+
+</RelativeLayout>
