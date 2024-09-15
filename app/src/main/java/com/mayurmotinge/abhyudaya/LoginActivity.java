@@ -25,6 +25,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText etUsername, etPassword;
     CheckBox cbShowPassword;
     Button btnLogin;
+    TextView tvNewUser;
 
     SharedPreferences preferences;
     SharedPreferences.Editor editor;
@@ -52,6 +53,7 @@ public class LoginActivity extends AppCompatActivity {
         etPassword = findViewById(R.id.etPassword);
         cbShowPassword = findViewById(R.id.cbShowPassword);
         btnLogin = findViewById(R.id.btnLogin);
+        tvNewUser = findViewById(R.id.tvNewUser);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,6 +110,14 @@ public class LoginActivity extends AppCompatActivity {
                     startActivity(intnt);
                     finish();
                 }
+            }
+        });
+
+        tvNewUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(LoginActivity.this, RegistrationActivity.class);
+                startActivity(i);
             }
         });
 

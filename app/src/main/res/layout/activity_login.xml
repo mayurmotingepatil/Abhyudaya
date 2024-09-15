@@ -111,6 +111,16 @@
             android:fontFamily="@font/roboto_regular"
             android:layout_gravity="center_horizontal" />
 
+        <TextView
+            android:id="@+id/tvNewUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register as Admin"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center_horizontal" />
 
         <TextView
             android:layout_width="wrap_content"
