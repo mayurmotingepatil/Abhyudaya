@@ -19,15 +19,13 @@
             android:exported="false" />
         <activity
             android:name=".EditUserInfoActivity"
-            android:exported="false"
-            android:theme="@style/Theme.AbhyudayaWithAction" />
+            android:exported="false" />
         <activity
             android:name=".ProfileActivity"
             android:exported="false" />
         <activity
             android:name=".HomeActivity"
-            android:exported="false"
-            android:theme="@style/Theme.AbhyudayaWithAction" />
+            android:exported="false" />
         <activity
             android:name=".LoginActivity"
             android:exported="false" />
