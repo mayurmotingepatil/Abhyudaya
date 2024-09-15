@@ -83,7 +83,7 @@
         android:id="@+id/etUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter Name"
+        android:hint="Create Username"
         android:inputType="text"
         android:textColorHint="@color/transp_white"
         android:textColor="@color/white"
@@ -97,7 +97,7 @@
         android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Password"
+        android:hint="Create Password"
         android:inputType="textPassword"
         android:textColorHint="@color/transp_white"
         android:textColor="@color/white"
@@ -106,6 +106,43 @@
         android:fontFamily="@font/roboto_regular"
         android:layout_marginHorizontal="20dp"
         android:layout_marginVertical="8dp"/>
+
+    <CheckBox
+        android:id="@+id/cbShowPasswordOnAddPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shhow Password"
+        android:buttonTint="@color/white"
+        android:textColor="@color/white"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="8dp"
+        android:layout_gravity="right"/>
+
+    <RadioGroup
+        android:id="@+id/rgAddPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="8dp">
+
+        <RadioButton
+            android:id="@+id/rbResidentAddPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/white"
+            android:text="Resident"
+            android:textSize="18sp"
+            android:textColor="@color/white"/>
+
+        <RadioButton
+            android:id="@+id/rbOfficerAddPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/white"
+            android:text="Officer"
+            android:textSize="18sp"
+            android:textColor="@color/white"/>
+    </RadioGroup>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnAddPerson"
