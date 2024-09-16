@@ -11,7 +11,8 @@
         android:id="@+id/cardTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp">
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="8dp">
 
         <EditText
             android:id="@+id/etSearchBar"
@@ -51,8 +52,7 @@
         android:background="@drawable/bottom_menu_shape"
         app:itemIconTint="@color/cream"
         app:itemTextColor="@color/cream"
-        app:labelVisibilityMode="labeled"
-        app:menu="@menu/bottom_manu_home"
-        android:importantForContentCapture="auto"/>
+        app:labelVisibilityMode="selected"
+        app:menu="@menu/bottom_manu_home"/>
 
 </RelativeLayout>
