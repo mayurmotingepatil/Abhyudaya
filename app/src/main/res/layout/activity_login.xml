@@ -86,7 +86,7 @@
             android:backgroundTint="@color/black_cream"
             android:fontFamily="@font/roboto_regular"
             android:paddingLeft="15sp"
-            android:inputType="text"/>
+            android:inputType="textPassword"/>
 
         <CheckBox
             android:id="@+id/cbShowPassword"

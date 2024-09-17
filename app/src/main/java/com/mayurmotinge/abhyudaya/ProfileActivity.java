@@ -21,7 +21,7 @@ import java.util.prefs.AbstractPreferences;
 public class ProfileActivity extends AppCompatActivity {
 
     TextView tvName, tvMobNo, tvEmail, tvAadhar, tvPrevAddress, tvUsername;
-    ImageView ivLogout, profilePhoto;
+    TextView tvLogout, profilePhoto;
 
     SharedPreferences preferences;
     SharedPreferences.Editor editor;
@@ -39,13 +39,13 @@ public class ProfileActivity extends AppCompatActivity {
 
         tvName = findViewById(R.id.tvName);
 
-        ivLogout = findViewById(R.id.ivLogout);
+        tvLogout = findViewById(R.id.tvLogout);
 
         preferences = PreferenceManager.getDefaultSharedPreferences(ProfileActivity.this);
         editor = preferences.edit();
 
 
-        ivLogout.setOnClickListener(new View.OnClickListener() {
+        tvLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder ad = new AlertDialog.Builder(ProfileActivity.this);
