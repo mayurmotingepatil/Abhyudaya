@@ -1,7 +1,9 @@
 package com.mayurmotinge.abhyudaya;
 
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.text.method.HideReturnsTransformationMethod;
@@ -20,12 +22,19 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.RequestParams;
+import com.mayurmotinge.abhyudaya.supportclasses.NetworkChangeListener;
+import com.mayurmotinge.abhyudaya.supportclasses.Urls;
+
 public class LoginActivity extends AppCompatActivity {
 
     EditText etUsername, etPassword;
     CheckBox cbShowPassword;
     Button btnLogin;
     TextView tvNewUser;
+
+    NetworkChangeListener ncl;
 
     SharedPreferences preferences;
     SharedPreferences.Editor editor;
@@ -54,6 +63,8 @@ public class LoginActivity extends AppCompatActivity {
         cbShowPassword = findViewById(R.id.cbShowPassword);
         btnLogin = findViewById(R.id.btnLogin);
         tvNewUser = findViewById(R.id.tvNewUser);
+
+        ncl = new NetworkChangeListener();
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -107,11 +118,16 @@ public class LoginActivity extends AppCompatActivity {
                     Intent intnt = new Intent(LoginActivity.this, HomeActivity.class);
                     editor.putString("loggedInUsername", username).commit();
                     editor.putBoolean("isLoggedIn", true).commit();
+
+                    login(username, password);
+
                     startActivity(intnt);
                     finish();
                 }
             }
         });
+
+
 
         tvNewUser.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -133,4 +149,25 @@ public class LoginActivity extends AppCompatActivity {
         });
 
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        IntentFilter intentFilter = new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
+        registerReceiver(ncl, intentFilter);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        unregisterReceiver(ncl);
+    }
+
+    private void login(String username, String password){
+        AsyncHttpClient client = new AsyncHttpClient();
+
+    }
+
+
+
 }
