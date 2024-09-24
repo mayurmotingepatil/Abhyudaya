@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddEventActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="Event"
+        android:textColor="@color/white"
+        android:background="@color/black_cream"
+        android:textStyle="bold"
+        android:textSize="25sp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tvTitle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="5dp"
+            android:paddingHorizontal="18dp">
+
+            <EditText
+                android:id="@+id/etEventTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:backgroundTint="@color/cream"
+                android:hint="Event Title"
+                android:inputType="text"
+                android:textColor="@color/white"
+                android:textColorHint="@color/transp_white"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/etDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:backgroundTint="@color/cream"
+                android:hint="Description"
+                android:inputType="text"
+
+                android:textColor="@color/white"
+                android:textColorHint="@color/transp_white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvTextAddDT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Time and Date"
+                android:textColor="@color/transp_white"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:text="DD/MM/YYYY"
+                android:gravity="center_vertical"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:padding="10dp"/>
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:gravity="center_vertical"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:padding="10dp"/>
+
+            <ImageView
+                android:id="@+id/ivImageEvent"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/mid_black_cream"/>
+
+            <TextView
+                android:id="@+id/tvAddImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="20dp"
+                android:text="Upload Photo"
+                android:textColor="@color/white"
+                android:drawableRight="@drawable/icon_add_a_photo"
+                android:drawableTint="@color/white"
+                android:drawablePadding="5dp"
+                android:textSize="18sp"
+                android:layout_gravity="right"/>
+
+            <EditText
+                android:id="@+id/etContribution"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:backgroundTint="@color/cream"
+                android:hint="Contribution"
+                android:inputType="text"
+                android:textColor="@color/white"
+                android:textColorHint="@color/transp_white"
+                android:textSize="18sp"
+                android:drawableLeft="@drawable/icon_maintenance"
+                android:drawablePadding="10dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnAddPerson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="30dp"
+                android:background="@drawable/btn_shape_cream"
+                android:paddingHorizontal="20dp"
+                android:text="Continue"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

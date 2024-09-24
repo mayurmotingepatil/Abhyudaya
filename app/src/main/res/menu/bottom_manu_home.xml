@@ -3,18 +3,18 @@
 
     <item
         android:id="@+id/home"
-        android:title="home"
+        android:title="Home"
         android:icon="@drawable/icon_home" />
 
     <item
         android:id="@+id/people"
-        android:title="residents"
+        android:title="People"
         android:icon="@drawable/icon_people" />
 
     <item
         android:id="@+id/maintenance"
-        android:title="maintenance"
-        android:icon="@drawable/icon_maintenance" />
+        android:title="Maintenance"
+        android:icon="@drawable/icon_repee_circle" />
 
 
 </menu>

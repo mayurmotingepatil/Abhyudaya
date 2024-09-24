@@ -7,52 +7,67 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
-    <RelativeLayout
-        android:id="@+id/cardTitle"
+
+    <TextView
+        android:id="@+id/tvPageMessage"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:paddingLeft="18dp"
+        android:gravity="center_vertical"
+        android:text="Hello"
+        android:textColor="@color/white"
+        android:background="@color/black_cream"
+        android:textStyle="bold"
+        android:textSize="25sp"/>
+
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/etSearchBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="8dp"
-        android:layout_marginTop="8dp">
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:background="@drawable/shape_search"
+        app:queryHint="Click to Search"
+        app:iconifiedByDefault="false"
+        android:theme="@style/Theme.AbhyudayaWithWhiteText"
+        android:layout_marginHorizontal="10dp"
+        android:layout_below="@id/tvPageMessage"/>
 
-        <EditText
-            android:id="@+id/etSearchBar"
-            android:layout_width="match_parent"
-            android:layout_height="46dp"
-            android:textSize="15sp"
-            android:textColor="@color/white"
-            android:background="@drawable/shape_search"
-            android:drawableTint="@color/white"
-            android:hint="Click to Search"
-            android:textColorHint="@color/transp_white"
-            android:drawableLeft="@drawable/icon_search"
-            android:layout_toLeftOf="@+id/ivProfile"
-            android:paddingLeft="8dp"
-            android:layout_marginRight="6dp"/>
+    <androidx.cardview.widget.CardView
+        android:layout_width="35dp"
+        android:layout_height="36dp"
+        app:cardCornerRadius="18dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginVertical="15dp"
+        android:layout_marginRight="20dp"
+        app:cardBackgroundColor="@color/black">
 
         <ImageView
             android:id="@+id/ivProfile"
             android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:src="@drawable/icon_profile"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"/>
-    </RelativeLayout>
+            android:layout_height="36dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_profile"/>
+
+    </androidx.cardview.widget.CardView>
+
+
 
     <FrameLayout
         android:id="@+id/flOnHome"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/cardTitle"/>
+        android:layout_below="@+id/etSearchBar"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@drawable/bottom_menu_shape"
-        app:itemIconTint="@color/cream"
-        app:itemTextColor="@color/cream"
-        app:labelVisibilityMode="selected"
-        app:menu="@menu/bottom_manu_home"/>
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_manu_home"
+        android:theme="@style/Theme.AbhyudayaWithBlackText"
+        android:background="@drawable/bottom_menu_shape" />
 
 </RelativeLayout>

@@ -1,13 +1,14 @@
 package com.mayurmotinge.abhyudaya;
 
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.os.Build;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
@@ -23,6 +24,7 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
     BottomNavigationView bnvHome;
     EditText etSearchBar;
     ImageView ivProfile;
+    TextView tvPageMessage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +44,8 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
         bnvHome.setOnNavigationItemSelectedListener(this);
         bnvHome.setSelectedItemId(R.id.home);
 
+        tvPageMessage = findViewById(R.id.tvPageMessage);
+
         ivProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,15 +63,22 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
         if (item.getItemId() == R.id.home){
             getSupportFragmentManager().beginTransaction().replace(R.id.flOnHome,
                     homeFragment).commit();
+
+            return true;
         } else if (item.getItemId() == R.id.people){
             getSupportFragmentManager().beginTransaction().replace(R.id.flOnHome,
                     peopleFragment).commit();
+
+            return true;
         } else if (item.getItemId() == R.id.maintenance){
             getSupportFragmentManager().beginTransaction().replace(R.id.flOnHome,
                     maintenanceFragment).commit();
+
+            return true;
         }
         return true;
     }
