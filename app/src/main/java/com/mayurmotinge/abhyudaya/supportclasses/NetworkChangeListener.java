@@ -35,7 +35,7 @@ public class NetworkChangeListener extends BroadcastReceiver {
                 }
             });
         } else {
-            Toast.makeText(context, "No Internet Connection", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Internet Connected Successfully", Toast.LENGTH_SHORT).show();
         }
     }
 }

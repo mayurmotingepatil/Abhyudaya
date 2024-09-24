@@ -11,7 +11,8 @@
         android:id="@+id/headerHome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="6dp">
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="5dp">
 
         <TextView
             android:id="@+id/tvTitleHome"
@@ -20,7 +21,6 @@
             android:text="Home"
             android:textSize="20sp"
             android:textColor="@color/white"
-            android:layout_margin="3dp"
             android:layout_centerVertical="true"/>
 
         <ImageView
@@ -29,18 +29,12 @@
             android:layout_height="35dp"
             android:src="@drawable/icon_add"
             app:tint="@color/white"
-            android:layout_margin="4dp"
             android:layout_centerVertical="true"
             android:layout_alignParentEnd="true"/>
 
     </RelativeLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/residentsList"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/headerHome"
-        android:layout_marginHorizontal="6dp"/>
+
 
 
 </RelativeLayout>
