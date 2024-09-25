@@ -15,6 +15,7 @@
         android:text="Edit Information"
         android:textColor="@color/white"
         android:background="@color/black_cream"
+        android:elevation="10dp"
         android:textStyle="bold"
         android:textSize="25sp"/>
 

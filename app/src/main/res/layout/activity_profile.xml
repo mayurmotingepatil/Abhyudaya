@@ -7,29 +7,39 @@
     android:layout_height="match_parent"
     tools:context=".ProfileActivity">
 
-    <TextView
-        android:id="@+id/tvProfileUsernamee"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:id="@+id/rlHeaderProfile"
+        android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:paddingHorizontal="15dp"
-        android:gravity="center_vertical"
-        android:text="Username"
-        android:textColor="@color/white"
         android:background="@color/black_cream"
-        android:textStyle="bold"
-        android:textSize="25sp"/>
+        android:elevation="10dp">
 
-    <TextView
-        android:id="@+id/tvProfileHouseNo"
-        android:layout_width="wrap_content"
-        android:layout_height="70dp"
-        android:paddingHorizontal="15dp"
-        android:gravity="center_vertical"
-        android:text="house No."
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:layout_alignParentRight="true"/>
+        <TextView
+            android:id="@+id/tvProfileUsername"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:paddingHorizontal="15dp"
+            android:gravity="center_vertical"
+            android:text="Username"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="25sp"/>
+
+        <TextView
+            android:id="@+id/tvProfileHouseNo"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:paddingHorizontal="15dp"
+            android:gravity="center_vertical"
+            android:text="house No."
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cvProfilePhoto"
@@ -38,8 +48,8 @@
         app:cardCornerRadius="51dp"
         android:background="@color/black"
         android:layout_marginHorizontal="15dp"
-        android:layout_marginVertical="10dp"
-        android:layout_below="@id/tvProfileUsernamee"
+        android:layout_marginVertical="15dp"
+        android:layout_below="@id/rlHeaderProfile"
         app:cardBackgroundColor="@color/white">
 
         <ImageView
@@ -60,9 +70,9 @@
         android:textColor="@color/white"
         android:textSize="18dp"
         android:textStyle="bold"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
         android:layout_toRightOf="@id/cvProfilePhoto"
-        android:layout_below="@id/tvProfileUsernamee"/>
+        android:layout_below="@id/rlHeaderProfile"/>
 
     <TextView
         android:id="@+id/tvEmail"
@@ -95,7 +105,7 @@
         android:drawableRight="@drawable/icon_logout"
         android:drawableTint="@color/white"
         android:textSize="18dp"
-        android:layout_margin="15dp"
+        android:layout_marginHorizontal="15dp"
         android:drawablePadding="5dp"
         android:layout_below="@id/cvProfilePhoto"
         android:layout_alignParentRight="true"/>

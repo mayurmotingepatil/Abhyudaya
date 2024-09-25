@@ -7,29 +7,34 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
-
-    <TextView
-        android:id="@+id/tvPageMessage"
+    <RelativeLayout
+        android:id="@+id/rlHeaderHome"
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:paddingLeft="15dp"
-        android:gravity="center_vertical"
-        android:text="Hello"
-        android:textColor="@color/white"
         android:background="@color/black_cream"
-        android:textStyle="bold"
-        android:textSize="25sp"/>
+        android:elevation="10dp">
 
+        <TextView
+            android:id="@+id/tvPageMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:paddingHorizontal="15dp"
+            android:gravity="center_vertical"
+            android:text="Hello"
+            android:textColor="@color/white"
+            android:background="@color/black_cream"
+            android:textStyle="bold"
+            android:textSize="25sp"/>
 
-    <ImageView
-        android:id="@+id/ivSearchIcon"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
-        android:src="@drawable/icon_search"
-        android:layout_marginHorizontal="15dp"
-        android:layout_marginVertical="15dp"
-        android:layout_toLeftOf="@id/ivProfile"
-        app:tint="@color/white" />
+        <ImageView
+            android:id="@+id/ivSearchIcon"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/icon_search"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="15dp"
+            android:layout_toLeftOf="@id/ivProfile"
+            app:tint="@color/white" />
 
         <ImageView
             android:id="@+id/ivProfile"
@@ -41,13 +46,14 @@
             android:layout_marginRight="15dp"
             android:layout_marginVertical="15dp"/>
 
+    </RelativeLayout>
 
 
     <FrameLayout
         android:id="@+id/flOnHome"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/tvPageMessage"/>
+        android:layout_below="@+id/rlHeaderHome"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
