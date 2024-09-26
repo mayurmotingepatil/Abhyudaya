@@ -7,12 +7,25 @@
     tools:context=".PeopleFragment">
 
     <!-- TODO: Update blank fragment layout -->
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/svSearchViewPeople"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_search"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="3dp"
+        app:queryHint="Search People"
+        android:theme="@style/Theme.AbhyudayaWithBlackText"
+        app:iconifiedByDefault="false"/>
+
     <RelativeLayout
         android:id="@+id/headerPeople"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingHorizontal="15dp"
-        android:paddingVertical="5dp">
+        android:paddingVertical="5dp"
+        android:layout_below="@id/svSearchViewPeople">
 
         <TextView
             android:id="@+id/TitlePeople"
@@ -21,8 +34,7 @@
             android:text="People"
             android:textSize="20sp"
             android:textColor="@color/white"
-            android:layout_margin="3dp"
-            android:layout_centerVertical="true"/>
+            android:layout_centerVertical="true" />
 
         <ImageView
             android:id="@+id/ivAddPeople"
