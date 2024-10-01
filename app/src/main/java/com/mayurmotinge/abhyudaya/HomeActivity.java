@@ -22,7 +22,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class HomeActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
     BottomNavigationView bnvHome;
-    ImageView ivProfile, ivSearchIcon;
+    ImageView ivProfile;
     TextView tvPageMessage;
 
     @Override
@@ -36,7 +36,6 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
             return insets;
         });
 
-        ivSearchIcon = findViewById(R.id.ivSearchIcon);
         ivProfile = findViewById(R.id.ivProfile);
 
         bnvHome = findViewById(R.id.bottom_navigation);
